@@ -138,16 +138,15 @@ nav {
     background-color: rgb(255, 0, 0);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    width: 300px;
+    width: 30%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
   .navLinks li {
     z-index: 1;
     color: white;
-    opacity: 0;
+    opacity: 1;
   }
   .burger {
     display: block;
@@ -155,31 +154,31 @@ nav {
     width: 30px;
     text-align: left;
   }
-  .navActive {
-    transform: translateX(0%);
-  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
 
-  @keyframes navAnim {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-  .toggle.line1 {
-    width: 30px;
-    transform: rotate(-135deg) translate(-5px, 6px);
-  }
-  .toggle.line2 {
+@keyframes navAnim {
+  from {
     opacity: 0;
+    transform: translateX(50);
   }
-  .toggle.line3 {
-    width: 30px;
-    transform: rotate(135deg) translate(-5px, -6px);
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+.toggle.line1 {
+  width: 30px;
+  transform: rotate(-135deg) translate(-5px, 6px);
+}
+.toggle.line2 {
+  opacity: 0;
+}
+.toggle.line3 {
+  width: 30px;
+  transform: rotate(135deg) translate(-5px, -6px);
 }
 
 #mainContent {
