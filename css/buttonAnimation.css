@@ -20,10 +20,12 @@
 	box-shadow: 0 0 30px orangered;
 	border-radius: 30px 5px ;
 	letter-spacing: 1px;
+	z-index: 1;
 }
 .button span{
     position: absolute;
 	display: block;
+	z-index: 1;
 }
 .button span:nth-child(1)
 {

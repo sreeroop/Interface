@@ -12,7 +12,7 @@ body {
 
 #particles-js {
   width: 100%;
-  height: 1000vh;
+  height: 800vh;
   background-color: black;
   background-image: url("");
   background-size: cover;
@@ -32,15 +32,14 @@ h5,
 h6 {
   color: white;
 }
-#container {
+.container {
   position: absolute;
   top: 0;
   left: 0;
   width: 99.5%;
-  height: 1000vh;
-  margin: 0.25%;
-  margin-top: 0.25%;
-  margin-bottom: 0.25%;
+  height: fit-content;
+  margin: .255 .25% .25% .25%;
+  
 }
 nav {
   position: fixed;
@@ -55,10 +54,13 @@ nav {
   border: 1px;
   margin-bottom: 1%;
   align-items: center;
+  background: rgba(0, 0, 0, 0.9);
 }
 .navLogo {
   width: 240px;
   height: 8vh;
+  margin-right: 15%;
+  margin-left: 1%;
   /*
   grid-column: 1/2;
   */
@@ -71,7 +73,6 @@ nav {
 }
 */
 .navLinks {
-  background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: space-around;
   width: 80%;
@@ -87,6 +88,11 @@ nav {
 .navLinks a:hover {
   color: orangered;
 }
+.active {
+  background-color: orangered;
+  color: white;
+}
+
 /*
 .navButton{
 	width: 100px;
@@ -126,7 +132,7 @@ nav {
 }
 */
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   body {
     overflow-x: hidden;
   }
@@ -135,16 +141,18 @@ nav {
     right: 0px;
     top: 15vh;
     height: 100vh;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 30%;
+    z-index: 2;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
   .navLinks li {
-    z-index: 1;
+    z-index: 2;
+
     color: white;
     opacity: 1;
   }
@@ -211,7 +219,7 @@ nav {
   width: 400px;
   grid-column: 3/4;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .mainButtons {
     display: grid;
     grid-template-columns: 20% 1fr 20%;
@@ -403,6 +411,22 @@ p {
   width: 100%;
   margin-left: 10px;
 }
-#demo {
-  color: orangered;
+.map{
+  max-width: 700px;
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+  justify-items: center;
+}
+footer p{
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+footer a{
+  text-decoration: none;
 }

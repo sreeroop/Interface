@@ -3,7 +3,7 @@
 <head>
 	<meta charset='utf-8' author="Sreeroop">
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<title></title>
+	<title>Interface'20</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/buttonAnimation.css'>
@@ -18,7 +18,7 @@
 	<script src="js/particle/particles.js"></script>
 	<script src="js/particle/app.js"></script>
 	
-	<div id="container">
+	<div class="container">
 		<!--
 		<div id="navbar">
 			<img src="" id="navLogo">
@@ -42,33 +42,40 @@
 			<img src="" class="navLogo">
 			<ul class="navLinks">
 					<li>
-						<a href="">Home</a>
+						<a class="links" href="#home">Home</a>
 					</li>
 					<li>
-						<a href="">About</a>
+						<a class="links" href="#about-interface">About</a>
 					</li>
 					<li>
-						<a href="">Events</a>
+						<a class="links" href="#events-interface">Events</a>
 					</li>
 					<li>
-						<a href="">Speakers</a>
+						<a class="links" href="#speakers-interface">Speakers</a>
 					</li>
 					<li>
-						<a href="">Sponsors</a>
+						<a class="links" href="#acheivements-interface">Acheivements</a>
 					</li>
 					<li>
-						<a href="">Contact</a>
+						<a class="links" href="#sponsors-interface">Sponsors</a>
+					</li>
+					<li>
+						<a class="links" href="#team-interface">Contact</a>
+					</li>
+					<li>
+						<a class="links" href="">Tarang</a>
 					</li>
 			</ul>
+			<script src="js/active.js"></script>
 			<div class="burger toggle">
 					<div class="line1"></div>
 					<div class="line2"></div>
 					<div class="line3"></div>
 			</div>
-			
+			<script src="js/active.js"></script>
 		</nav>
 		<script src="js/hamburger.js"></script>
-		<section>
+		<section id="home">
 		<div id="mainContent">
 			<div id="mainPhotos">
 				<img id="mainPhoto" src="pic/Rapatronic.jpeg">
@@ -89,10 +96,16 @@
 			</button>
 		</div>
 		</section>
-		<section class="about-interface">
+		<section id="about-interface">
+
+			<div class="heading">
+				<h1>What are we</h1>
+			</div>
+
 			<div class="content">
+							
 				<div class="about">
-					<h1>What are we</h1>
+					
 					<br>
 					<p>
 						Interface
@@ -109,7 +122,7 @@
 				
 			</div>
 		</section>
-		<section class="events-interface">
+		<section id="events-interface">
 		<div class="heading">
 			<h1>What we do</h1>
 		</div>
@@ -159,7 +172,7 @@
 			</div>
 		</div>
 		</section>
-		<section class="speakers-interface">
+		<section id="speakers-interface">
 			<div class="heading">
 				<h1>Our Previous Speakers</h1>
 			</div>
@@ -175,7 +188,7 @@
 
 			</div>
 		</section>
-		<section class="acheivements-interface">
+		<section id="acheivements-interface">
 			<div class="heading">
 				<h1>OUR  ACHEIVEMENTS</h1>
 			</div>
@@ -195,7 +208,7 @@
 			</div>
 		</section>
 
-		<section class="spomsors-interface">
+		<section id="sponsors-interface">
 			<div class="heading">
 				<h1>Collaborators</h1>
 			</div>
@@ -215,7 +228,7 @@
 			</div>
 		</section>
 
-		<section class="team-interface">
+		<section id="team-interface">
 			<div class="heading">
 				<h1>Organisers</h1>
 			</div>
@@ -234,12 +247,21 @@
 		
 			</div>
 		</section>
-		<div>
-			<p id="demo"></p>
-		<script src="js/type.js"></script>
-
+		<footer>
+		<div class="map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.2128500089893!2d75.93321922382047!3d11.319147321369957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba642fd50000001%3A0xbe8a77db953bda6c!2sNational+Institute+of+Technology%2C+Calicut!5e0!3m2!1sen!2sin!4v1527255945810"
+				width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
+		<p style="">
+			Copyright &copy;
+			<script>document.write(new Date().getFullYear());</script> | Developed by <a
+				href="https://www.linkedin.com/sreeroop-s-k-160527190" target="_blank" style="color:orangered">Sreeroop S K</a>
+		</p>
+		</footer>
 	</div>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 </body>
 </html>
 
