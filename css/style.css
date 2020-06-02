@@ -9,6 +9,27 @@
 body {
   background-color: black;
 }
+  /* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: orangered;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar:hover {
+  width: 15px;
+}
+
+
 
 #particles-js {
   width: 100%;
@@ -38,8 +59,7 @@ h6 {
   left: 0;
   width: 99.5%;
   height: fit-content;
-  margin: .255 .25% .25% .25%;
-  
+  margin: 0.255 0.25% 0.25% 0.25%;
 }
 nav {
   position: fixed;
@@ -54,7 +74,7 @@ nav {
   border: 1px;
   margin-bottom: 1%;
   align-items: center;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.5);
 }
 .navLogo {
   width: 240px;
@@ -89,8 +109,7 @@ nav {
   color: orangered;
 }
 .active {
-  background-color: orangered;
-  color: white;
+  color: orangered;
 }
 
 /*
@@ -152,8 +171,7 @@ nav {
   }
   .navLinks li {
     z-index: 2;
-
-    color: white;
+    color: rgb(216, 201, 201);
     opacity: 1;
   }
   .burger {
@@ -188,6 +206,78 @@ nav {
   width: 30px;
   transform: rotate(135deg) translate(-5px, -6px);
 }
+.connect {
+  position: fixed;
+  left: 0;
+  top: 200px;
+  width: 80px;
+  height: 300px;
+  background-color: orangered;
+  border-radius: 0 12px 12px 0;
+  transform: translate(-90%);
+}
+.connect p {
+  position: absolute;
+  left: -100px;
+  top: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: rotate(90deg);
+  background: linear-gradient(
+    45deg,
+    orangered,
+    white,
+    orangered,
+    white,
+    orangered,
+    white,
+    orangered
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: white;
+}
+.connect:hover {
+  transform: translate(0%);
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 4px;
+  margin-top: 4px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.fa:hover {
+ opacity: 1; 
+ transform: scale(1.2);
+}
+
+.fa-facebook {
+  background: transparent;
+  color: white;
+}
+
+.fa-twitter {
+  background: transparent;
+  color: white;
+}
+
+.fa-instagram {
+  background: transparent;
+  color: white;
+}
+
+.fa-linkedin {
+  background: transparent;
+  color: white;
+}
 
 #mainContent {
   display: flex;
@@ -210,6 +300,7 @@ nav {
   margin: auto;
   padding: 20px;
   text-align: center;
+  pointer-events: cursor;
 }
 .button1 {
   width: 200px;
@@ -249,7 +340,6 @@ nav {
 }
 .about {
   width: 100%;
-  height: 90vh;
   padding: 10px;
   grid-column: 2/3;
   font-size: 16px;
@@ -349,6 +439,55 @@ p {
   color: orangered;
   margin-bottom: 5%;
 }
+
+
+
+/* flip card*/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+/*----------------------------------------------*/
+
 .speakers {
   display: grid;
   grid-template-columns: repeat(4, 300px);
@@ -411,7 +550,7 @@ p {
   width: 100%;
   margin-left: 10px;
 }
-.map{
+.map {
   max-width: 700px;
   margin: auto;
   margin-top: 10%;
@@ -420,13 +559,13 @@ p {
   justify-content: center;
   justify-items: center;
 }
-footer p{
+footer p {
   margin: auto;
   margin-top: 100px;
   margin-bottom: 0px;
   font-size: 15px;
   font-weight: bold;
 }
-footer a{
+footer a {
   text-decoration: none;
 }
