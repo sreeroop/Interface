@@ -5,10 +5,7 @@
   scroll-behavior: smooth;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
-  background-color: black;
-  overflow-x: hidden;
-}
+
 /* width */
 ::-webkit-scrollbar {
   width: 2px;
@@ -29,15 +26,18 @@ body {
   width: 15px;
 }
 
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
 
 #particles-js {
   width: 100%;
-  height: 800vh;
+  height: 830vh;
   background-color: black;
   background-image: url("");
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: repeat;
   z-index: -1;
 }
 
@@ -71,7 +71,6 @@ nav {
   display: flex;
   justify-content: space-around;
   border: 1px;
-  margin-bottom: 1%;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   z-index: 5;
@@ -81,17 +80,8 @@ nav {
   height: 8vh;
   margin-right: 15%;
   margin-left: 1%;
-  /*
-  grid-column: 1/2;
-  */
 }
-/*
-.nav-links {
-  grid-column: 3/4;
-  display: flex;
-  justify-content: space-around;
-}
-*/
+
 .navLinks {
   display: flex;
   justify-content: space-around;
@@ -112,24 +102,6 @@ nav {
   color: orangered;
 }
 
-/*
-.navButton{
-	width: 100px;
-	height: 8vh;
-	border-radius: 5px 30px;
-	margin: 10px 10px 10px 0px;
-	background: transparent;
-	color: orangered;
-	letter-spacing: 0px;
-	font-weight: 500;
-}
-
-.navButton:hover{
-	color: white;
-	letter-spacing: 2px;
-	background-color: orangered;
-}
-*/
 .burger {
   display: none;
 }
@@ -139,7 +111,6 @@ nav {
   margin-top: 5px;
   transition: all 0.3s ease;
   width: 30px;
-  border-radius: 20%;
 }
 /*
 .line1 {
@@ -157,9 +128,9 @@ nav {
   .navLinks {
     position: absolute;
     right: 0px;
-    top: 15vh;
+    top: 0vh;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,62 +145,20 @@ nav {
     color: rgb(216, 201, 201);
     opacity: 1;
   }
-  /*
-  .burger div:focus {
-    .navLinks li:nth-child(1){
-    animation: a1 1s ease-in;
-    animation-delay: 1s;
-  }
-  .navLinks li:nth-child(2){
-    animation: a1 1s ease-in;
-    animation-delay: 1.1s;
-  }
-  .navLinks li:nth-child(3){
-    animation: a1 1s ease-in;
-    animation-delay: 1.2s;
-  }
-  .navLinks li:nth-child(4){
-    animation: a1 1s ease-in;
-    animation-delay: 1.3s;
-  }
-  .navLinks li:nth-child(5){
-    animation: a1 1s ease-in;
-    animation-delay: 1.4s;
-  }
-  .navLinks li:nth-child(6){
-    animation: a1 1s ease-in;
-    animation-delay: 1.5s;
-  }
-  .navLinks li:nth-child(7){
-    animation: a1 1s ease-in;
-    animation-delay: 1.6s;
-  }
-
-  @keyframes a1 {
-    0%{
-      transform: translate(100%);
-      opacity: 0.5;
-    }
-    100%{
-      transform: translate(0%);
-      opacity: 1;
-    }
-    50%{
-      transform: translate(-100%);
-      opacity: 1;
-    }
-  }
-  }
-  */
 
   .burger {
-    display: block;
+    position: absolute;
     cursor: pointer;
-    width: 30px;
-    text-align: left;
-    
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    z-index: 6;
+    cursor: pointer;
   }
-
+  .burger div {
+    opacity: 10;
+  }
   .nav-active {
     transform: translateX(0%);
   }
@@ -244,6 +173,14 @@ nav {
       transform: translateX(0);
     }
   }
+
+  /*
+  .burger {
+    width: 30px;
+    
+  }
+
+  
   .toggle.line1 {
     width: 30px;
     transform: rotate(-135deg) translate(-5px, 6px);
@@ -255,12 +192,13 @@ nav {
     width: 30px;
     transform: rotate(135deg) translate(-5px, -6px);
   }
+  */
 }
 .connect {
   position: fixed;
   left: 0;
   top: 200px;
-  width: 80px;
+  width: 70px;
   height: 300px;
   background-color: rgba(255, 68, 0, 0.3);
   border-radius: 0 12px 12px 0;
@@ -269,7 +207,7 @@ nav {
 }
 .connect p {
   position: absolute;
-  left: -110px;
+  left: -115px;
   top: 250px;
   display: flex;
   flex-direction: column;
@@ -281,14 +219,13 @@ nav {
 .connect:hover {
   transform: translate(0%);
   background-color: rgba(255, 68, 0, 0.8);
-
 }
 @media screen and (max-width: 1000px) {
   .connect {
     position: fixed;
     left: 0;
     top: 200px;
-    width: 60px;
+    width: 55px;
     height: 300px;
     background-color: rgba(255, 68, 0, 0.3);
     border-radius: 0 12px 12px 0;
@@ -300,27 +237,21 @@ nav {
     left: -130px;
     top: 250px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    transform: rotate(90deg);
     font-weight: bold;
     color: rgba(255, 255, 255, 0.3);
   }
   .connect:hover {
     transform: translate(0%);
-  background-color: rgba(255, 68, 0, 0.8);
-
+    background-color: rgba(255, 68, 0, 0.8);
   }
 }
 
 .fa {
-  padding: 20px;
+  padding-top: 35px;
+  padding-left: 15px;
   font-size: 30px;
   width: 50px;
-  text-align: center;
   text-decoration: none;
-  margin-left: -2px;
-  margin-top: 4px;
   border-radius: 50%;
   opacity: 0.7;
 }
@@ -354,12 +285,18 @@ nav {
   width: 100%;
   height: auto;
   margin: auto;
-  margin-top: 1rem;
   text-align: center;
 }
 #mainPhoto {
-  width: 100%;
+  width: 60%;
   height: auto;
+}
+@media screen and (max-width: 1000px) {
+  #mainPhoto {
+    margin-top: 20%;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .mainButtons {
@@ -383,12 +320,12 @@ nav {
     grid-template-rows: 50px 50px 50px;
   }
   .button1 {
-    width: 200px;
+    width: 160px;
     grid-column: 2/3;
     grid-row: 1/2;
   }
   .button2 {
-    width: 400px;
+    width: 350px;
     grid-column: 2/3;
     grid-row: 3/4;
   }
@@ -398,7 +335,6 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 5%;
-  margin-top: 1%;
 }
 @media screen and (max-width: 1000px) {
   .content {
@@ -483,17 +419,15 @@ p {
   color: orangered;
 }
 @media screen and (max-width: 1000px) {
-  .heading {
-    padding: 5%;
-    height: 100px;
-    text-align: center;
+  .heading h1 {
+    font-size: 32px;
   }
   .heading h1::first-letter {
     color: orangered;
-    font-size: 50px;
+    font-size: 34px;
   }
   .heading h2 {
-    font-size: 40px;
+    font-size: 26px;
   }
 }
 
@@ -666,68 +600,33 @@ p {
   }
 }
 
-/* flip card*/
 
-.flip-card {
-  background-color: transparent;
-  max-width: 300px;
-  max-height: 300px;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: visible;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-/*----------------------------------------------*/
 
 .speakers {
   display: grid;
-  grid-template-columns: repeat(4 300px);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  justify-content: center;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem;
 }
-@media screen and (max-width: 1000px) {
-  .speakers{
-  grid-template-columns: repeat(2 300px);
-  }
+.speaker {
+  height: 90%;
+  overflow: hidden;
 }
-.speakers img {
+.speaker:hover {
+  height: 100%;
+}
+.speaker img {
   width: 100%;
-  margin-left: 10px;
 }
+.speaker img:hover {
+  transform: scale(1.1);
+}
+.speaker p {
+  text-align: center;
+  height: fit-content;
+  width: max-content;
+}
+
+
 .type {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 50px;
@@ -755,15 +654,13 @@ p {
   text-align: right;
 }
 .sponsors {
-  display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   justify-items: center;
 }
 .sponsors img {
-  width: 100%;
+  width: 50%;
   margin-left: 10px;
 }
 .team {
@@ -787,7 +684,7 @@ p {
   justify-content: center;
   justify-items: center;
 }
-@media and screen (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   .map {
     min-width: 300px;
     margin: auto;
@@ -803,12 +700,12 @@ footer p {
 }
 footer a {
   text-decoration: none;
+  font-weight: lighter;
 }
 
 /* ----------------------responsive brkpoint ------------------------------------------------*/
 
 @media screen and (max-width: 1000px) {
-  bod
   h1 {
     color: white;
     font-size: 46px;
@@ -822,8 +719,6 @@ footer a {
     margin: auto;
   }
 
- 
-  
   .sponsors {
     display: grid;
     grid-template-columns: repeat(4, 200px);
@@ -848,6 +743,4 @@ footer a {
     width: 100%;
     margin-left: 10px;
   }
-  
- 
 }

@@ -8,14 +8,15 @@ const navSlide = () => {
 
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
-        link.style.animation = '';
+        link.style.animation = "";
       } else {
         link.style.animation = `navAnim 5s ease forward ${index / 7 + 5}s`;
       }
     });
 
     burger.classList.toggle("toggle");
-
   });
+    onclick.navLinks.toggle("nav-active");
+
 };
 navSlide();
