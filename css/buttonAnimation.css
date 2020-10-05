@@ -12,6 +12,7 @@
 	font-weight: 600;
 	letter-spacing: 0px;
 	justify-self: center;
+	pointer-events: stroke;
 
 }
 .button:hover{
@@ -34,7 +35,7 @@
 	height: 3px;
 	width: 100%;
 	background: linear-gradient(90deg,transparent,orangered);
-	animation: anim1 1s linear infinite;
+	animation: anim1 2s linear infinite;
 }
 @keyframes anim1
 {
@@ -52,8 +53,8 @@
 	height: 100%;
 	width: 3px;
 	background: linear-gradient(180deg,transparent,orangered);
-	animation: anim2 1s linear infinite;
-	animation-delay: .25s;
+	animation: anim2 2s linear infinite;
+	animation-delay: .5s;
 }
 @keyframes anim2
 {
@@ -71,8 +72,8 @@
 	height: 3px;
 	width: 100%;
 	background: linear-gradient(90deg,transparent,orangered);
-	animation: anim3 1s linear infinite;
-	animation-delay: .25s;
+	animation: anim3 2s linear infinite;
+	animation-delay: .5s;
 }
 @keyframes anim3
 {
@@ -90,7 +91,7 @@
 	height: 100%;
 	width: 3px;
 	background: linear-gradient(180deg,transparent,orangered);
-	animation: anim4 1s linear infinite;
+	animation: anim4 2s linear infinite;
 	animation-delay: 0s;
 }
 @keyframes anim4

@@ -16,7 +16,6 @@ const navSlide = () => {
 
     burger.classList.toggle("toggle");
   });
-    onclick.navLinks.toggle("nav-active");
 
 };
 navSlide();
