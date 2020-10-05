@@ -605,7 +605,7 @@ p {
   grid-gap: 2rem;
 }
 .speaker {
-  height: 90%;
+  height: 80%;
   overflow: hidden;
 }
 .speaker:hover {
