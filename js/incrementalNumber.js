@@ -35,3 +35,12 @@ incrementalNumber = function () {
 
 
 }
+
+const numberAnimation = document.querySelector("#acheivements-interface");
+$(window).scroll(function() { 
+
+      if ($(window).scrollTop() >  $(numberAnimation).offset().top) {
+        incrementalNumber();
+      }
+
+});
