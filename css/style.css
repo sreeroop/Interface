@@ -60,7 +60,7 @@ h6 {
   margin: 0.255 0.25% 0.25% 0.25%;
 }
 .container::before {
-  content: url(../images/loadnganim.svg);
+  /* content: url(../images/loadnganim.svg);  */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -75,10 +75,6 @@ nav {
   position: fixed;
   width: 100%;
   height: 15vh;
-  /*
-  display: grid;
-  grid-template-columns: 250px 1fr 10fr;
-  */
   display: flex;
   justify-content: space-around;
   border: 1px;
@@ -99,6 +95,7 @@ nav {
   width: 80%;
 }
 .navLinks li {
+  position: relative;
   list-style: none;
 }
 .navLinks a {
@@ -109,8 +106,18 @@ nav {
 .navLinks a:hover {
   color: orangered;
 }
+
 .active {
-  color: orangered;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 2px solid orangered;
+  border-radius: 3px 12px 3px 12px;
 }
 
 .burger {
@@ -123,22 +130,6 @@ nav {
   transition: all 0.3s ease;
   width: 30px;
 }
-.active {
-  border-bottom: 5px solid orangered;
-  border-radius: 5px;
-  transition: all 1s ease-out;
-}
-/*
-.line1 {
-  width: 30px;
-}
-.line2 {
-  width: 20px;
-}
-.line3 {
-  width: 40px;
-}
-*/
 .menu {
   display: none;
 }
@@ -673,6 +664,10 @@ p {
   text-align: center;
   height: fit-content;
   width: max-content;
+}
+.speaker a {
+  color: orangered;
+  font-size: 1rem;
 }
 
 .type {

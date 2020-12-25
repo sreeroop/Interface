@@ -28,26 +28,26 @@
       <nav id="nav">
         <img src="" class="navLogo" />
         <ul class="navLinks">
-          <li class="active">
-            <a href="#home">Home</a>
+          <li>
+            <a data-page="home" href="#home">Home</a>
           </li>
           <li>
-            <a href="#about-interface">About</a>
+            <a data-page="about-interface" href="#about-interface">About</a>
           </li>
           <li>
-            <a href="#events-interface">Events</a>
+            <a data-page="events-interface" href="#events-interface">Events</a>
           </li>
           <li>
-            <a href="#speakers-interface">Speakers</a>
+            <a data-page="speakers-interface" href="#speakers-interface">Speakers</a>
           </li>
           <li>
-            <a href="#acheivements-interface">Acheivements</a>
+            <a data-page="achievements-interface" href="#acheivements-interface">Acheivements</a>
           </li>
           <li>
-            <a href="#sponsors-interface">Sponsors</a>
+            <a data-page="sponsors-interface" href="#sponsors-interface">Sponsors</a>
           </li>
           <li>
-            <a href="#team-interface">Contact</a>
+            <a data-page="team-interface" href="#team-interface">Contact</a>
           </li>
         </ul>
 
@@ -79,7 +79,7 @@
         <a href="#" class="fa fa-instagram"></a>
         <a href="#" class="fa fa-linkedin"></a>
       </div>-->
-      <section id="home">
+      <section data-index="0" id="home" class="home">
         <div id="mainContent">
           <div id="mainPhotos">
             <img id="mainPhoto" class="anim-img" src="images/final.png" />
@@ -102,7 +102,7 @@
           </button>
         </div>
       </section>
-      <section id="about-interface">
+      <section id="about-interface" data-index="1" class="about-interface">
         <div class="heading">
           <h1>What are we</h1>
         </div>
@@ -126,7 +126,7 @@
           <img src="pic/9.jpg" class="aboutImage anim-img" />
         </div>
       </section>
-      <section id="events-interface">
+      <section data-index="2" class="events-interface" id="events-interface">
         <div class="heading">
           <h1>What we do</h1>
         </div>
@@ -193,7 +193,7 @@
           <div class="event-lecturesImage"></div>
         </div>
       </section>
-      <section id="speakers-interface">
+      <section data-index="3" class="speakers-interface" id="speakers-interface">
         <div class="heading">
           <h1>Our Previous Speakers</h1>
         </div>
@@ -244,7 +244,7 @@
           </div>
         </div>
       </section>
-      <section id="acheivements-interface">
+      <section data-index="4" class="acheivements-interface" id="acheivements-interface">
         <div class="heading">
           <h1>OUR ACHEIVEMENTS</h1>
         </div>
@@ -273,7 +273,7 @@
         </script>
       </section>
 
-      <section id="sponsors-interface">
+      <section data-index="5" class="sponsors-interface" id="sponsors-interface">
         <div class="heading">
           <h1>Collaborators</h1>
         </div>
@@ -283,7 +283,7 @@
         <div class="sponsors"></div>
       </section>
 
-      <section id="team-interface">
+      <section data-index="6" class="team-interface" id="team-interface">
         <div class="heading">
           <h1>Organisers</h1>
         </div>
