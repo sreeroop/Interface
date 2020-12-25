@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -726,59 +726,176 @@ p {
   width: 100%;
   margin-left: 10px;
 }
+/* ---------------------------------OUR TEAM---------------------------------- */
+.team-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 5%;
+}
+.our-team {
+  background: black;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  width: 280px;
+  margin: 20px 25px;
+  padding: 30px 70px;
+}
+.our-team .pic {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 0px;
+  z-index: 1;
+  position: relative;
+}
+.our-team .pic::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background: orangered;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.2;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+.our-team:hover .pic::before {
+  height: 100%;
+}
+.our-team .pic:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: orangered;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.our-team .pic img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+.our-team:hover .pic img {
+  box-shadow: 0 0 0 14px orangered;
+  transform: scale(0.7);
+}
+.our-team .team-content {
+  margin-bottom: 30px;
+}
+.our-team .title {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.our-team .post {
+  display: block;
+  font-size: 15px;
+  color: white;
+}
+.our-team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: orangered;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+.our-team:hover .social {
+  bottom: 0;
+}
+.our-team .social li {
+  display: inline-block;
+}
+.our-team .social li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.our-team .social li a:hover {
+  color: orangered;
+  background: #fff;
+}
+@media (max-width: 720px) {
+  .team-container {
+    flex-direction: column;
+  }
+  .our-team {
+    width: 80%;
+    margin-top: 30px;
+  }
+}
+
 /* ----------------------Footer ------------------------------------------------*/
-.footer{
-  font-family: 'Poppins', sans-serif;
+.footer {
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   bottom: 0;
   margin: 5px 5px;
   background-color: black;
-
 }
-.footer h2{
+.footer h2 {
   color: orangered;
   font-size: 32px;
 }
-.footer p{
+.footer p {
   color: white;
 }
-.footer-img{
+.footer-img {
   padding: 10px 0 10px 10px;
   max-width: 200px;
   max-height: 200px;
 }
 .social-media {
-    display: flex;
-    padding-top: 5px;
-}  
-.social-icon {
-    height: 46px;
-    width: 46px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0.45rem;
-    color: orangered;
-    border-radius: 50%;
-    border: 1px solid #333;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: 0.3s;
-}  
-.social-icon:hover {
-    color: gold;
-    border-color: orangered;
+  display: flex;
+  padding-top: 5px;
 }
-.footer-middle i{
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: orangered;
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+.social-icon:hover {
+  color: gold;
+  border-color: orangered;
+}
+.footer-middle i {
   color: orangered;
 }
-.footer-middle span{
+.footer-middle span {
   color: white;
   font-size: 20px;
 }
-.footer-middle h2{
+.footer-middle h2 {
   padding-bottom: 10px;
   font-size: 32px;
 }
